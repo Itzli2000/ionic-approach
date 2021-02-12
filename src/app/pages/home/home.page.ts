@@ -10,14 +10,14 @@ export class HomePage implements OnInit {
 
   components: Components[] = [
     {
-      icon: 'logo-apple-appstore',
-      name: 'alet',
-      redirectTo: '/alert'
-    },
-    {
       icon: 'american-football-outline',
       name: 'action sheet',
       redirectTo: '/action-sheet'
+    },
+    {
+      icon: 'alert-circle-outline',
+      name: 'alert',
+      redirectTo: '/alert'
     },
   ];
 
