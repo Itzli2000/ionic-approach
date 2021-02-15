@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PickerOptions } from 'src/app/models/picker-options';
 
 @Component({
   selector: 'app-date-time',
@@ -9,10 +10,10 @@ export class DateTimePage implements OnInit {
 
   fechaNacimiento: Date = new Date();
   customYearValues: number[] = [2025, 2020, 2019, 2018, 2000];
-  customPickerOptions: any = {
+  customPickerOptions: PickerOptions = {
     buttons: [{
       text: 'Save',
-      handler: (event) => console.log('Clicked Save!', event)
+      handler: (event: object) => console.log('Clicked Save!', event)
     }, {
       text: 'Log',
       handler: () => {
