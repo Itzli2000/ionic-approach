@@ -39,6 +39,11 @@ export class HomePage implements OnInit {
       name: 'check',
       redirectTo: '/check'
     },
+    {
+      icon: 'calendar-outline',
+      name: 'date time',
+      redirectTo: '/date-time'
+    },
   ];
 
   constructor() { }
