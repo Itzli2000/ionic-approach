@@ -1,5 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonInfiniteScroll } from '@ionic/angular';
+import {
+  Component,
+  OnInit,
+  ViewChild
+} from '@angular/core';
+import {
+  IonInfiniteScroll
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-infinite',
@@ -11,21 +17,20 @@ export class InfinitePage implements OnInit {
   data: number[] = Array(20);
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   loadData() {
     setTimeout(() => {
-    if (this.data.length > 50) {
+      if (this.data.length > 50) {
+        this.infiniteScroll.complete();
+        this.infiniteScroll.disabled = true;
+        return;
+      }
+      const newArr = Array(20);
+      this.data.push(...newArr);
       this.infiniteScroll.complete();
-      this.infiniteScroll.disabled = true;
-      return;
-    }
-    const newArr = Array(20);
-    this.data.push(...newArr);
-    this.infiniteScroll.complete();
     }, 1500);
   }
 
