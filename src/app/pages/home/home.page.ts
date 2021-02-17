@@ -69,9 +69,9 @@ export class HomePage implements OnInit {
       redirectTo: '/list',
     },
     {
-      icon: 'list-outline',
+      icon: 'reorder-three-outline',
       name: 'Reorder list',
-      redirectTo: '/list-reorders',
+      redirectTo: '/list-reorder',
     },
   ];
 

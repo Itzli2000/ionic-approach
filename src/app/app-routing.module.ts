@@ -60,10 +60,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'list-reorders',
-    loadChildren: () => import('./page/list-reorders/list-reorders.module').then( m => m.ListReordersPageModule)
-  },
-  {
     path: 'list-reorder',
     loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
   },
