@@ -19,11 +19,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/avatar/avatar.module').then( m => m.AvatarPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'buttons',
     loadChildren: () => import('./pages/buttons/buttons.module').then( m => m.ButtonsPageModule)
   },
@@ -54,6 +49,23 @@ const routes: Routes = [
   {
     path: 'input',
     loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'list-reorders',
+    loadChildren: () => import('./page/list-reorders/list-reorders.module').then( m => m.ListReordersPageModule)
+  },
+  {
+    path: 'list-reorder',
+    loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
   },
 ];
 
