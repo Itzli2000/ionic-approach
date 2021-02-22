@@ -1,5 +1,8 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Atras" color="primary"></ion-back-button>
+    </ion-buttons>
     <ion-title>Search Bar</ion-title>
   </ion-toolbar>
   <ion-searchbar placeholder="Buscar" animated inputmode="text" type="text" (ionChange)="onSearchChange($event)"
