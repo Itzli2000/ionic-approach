@@ -12,11 +12,15 @@ export class DataService {
   ) { }
 
   getUsers() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
+    return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
   getMenuOptions() {
-    return this.http.get<Components[]>('/assets/data/menu-options.json')
+    return this.http.get<Components[]>('/assets/data/menu-options.json');
+  }
+
+  getAlbums() {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/albums');
   }
 
 }
