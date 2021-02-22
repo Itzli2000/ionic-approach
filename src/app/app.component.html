@@ -1,22 +1,23 @@
 <ion-app>
+  <ion-split-pane contentId="main" when="md">
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle *ngFor="let menuItem of menuOptions | async" autoHide="false">
+            <ion-item [routerLink]="menuItem.redirectTo" detail="true">
+              <ion-icon slot="start" [name]="menuItem.icon"></ion-icon>
+              <ion-label class="ion-text-capitalize">{{menuItem.name}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
 
-  <ion-menu side="start" menuId="first" contentId="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-menu-toggle *ngFor="let menuItem of menuOptions | async">
-          <ion-item  [routerLink]="menuItem.redirectTo" detail="true">
-            <ion-icon slot="start" [name]="menuItem.icon"></ion-icon>
-            <ion-label class="ion-text-capitalize">{{menuItem.name}}</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-
-  <ion-router-outlet id="main"></ion-router-outlet>
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
